@@ -4,7 +4,7 @@
     "protocol": "sftp",
     "port": 8001,
     "username": "buyong0925",
-    "password": "dnwns0421@1", 
+    "password": "<SET_YOUR_PASSWORD>",
     "remotePath": "/",
     "uploadOnSave": true,
     "useTempFile": true,

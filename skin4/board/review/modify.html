@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+
+    <!-- PG크로스브라우징필수내용 -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- // PG크로스브라우징필수내용 -->
+
+    <title></title>
+	
+    <link rel="stylesheet" href="/layout/basic/css/common.css">
+    <link rel="stylesheet" href="/layout/basic/css/layout.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-ui.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-button.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-tab.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-table.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-tooltip.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-help.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-fold.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-box.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-desc.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-product.css">
+  	<link rel="stylesheet" href="/layout/basic/css/ec-base-prdInfo.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-paginate.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link rel="stylesheet" href="/layout/basic/css/swiper.min.css">
+	<link rel="stylesheet" href="/_idio/css/rvRead.css">
+	
+	<script src="/layout/basic/js/swiper-bundle.min.js"></script>
+	<script src="/layout/basic/js/basic.js"></script>
+	<script src="/layout/basic/js/layout.js"></script>
+	<script src="/js/common.js"></script>
+	
+	<!--jquery-->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!--swiper-->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+	<!--font-->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/_idio/css/common.css">
+    <link rel="stylesheet" href="/_idio/css/font.css">
+    <link rel="stylesheet" href="/_idio/css/color.css">
+    <link rel="stylesheet" href="/_idio/css/iReview.css">
+    <link rel="stylesheet" href="/_idio/css/custom.css">
+
+	<script src="/_idio/js/idio.js"></script>
+	<script src="/setup.js"></script>
+	<script src="/_idio/js/iReview.js"></script>
+	
+    <link rel="stylesheet" href="/css/module/board/modifyPackage.css">
+
+</head>
+<body class="sb">
+
+<div class="section" module="board_ModifyPackage_4" style="padding:0 50px 50px;">
+    <div module="board_title_4">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="#">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2>{$board_title}</h2>
+        </div>
+    </div>
+
+    <div module="board_modify_4">
+        <!--
+            $write_success_url = /board/product/list.html
+            $product_select_url = /product/search_board_list.html
+            $order_select_url = /order/search_board_list.html
+         -->
+
+        <div class="ec-base-box typeProduct {$display_product|display}">
+            <p class="thumbnail"><a href="{$link_product_detail}"><img id="{$product_img_id}" src="{$url_product_img}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" alt=""></a></p>
+            <div class="information">
+                <h3><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></h3>
+                <p class="price">{$product_price} {$product_tax_type_text}</p>
+                <p class="button">
+                    <span id="{$product_view_id}" class="{$display_product_info|display}"><a href="/product/detail.html{$param_product}" id="{$product_link_id}" class="btnNormal sizeS" target="_blank">상품상세보기</a></span>
+                    <span class="{$display_product_select|display}"><a href="#none" class="btnNormal sizeS" onclick="{$action_product_select}">상품정보선택</a></span>
+                    <span class="{$display_order_select|display}"><a href="#none" class="btnNormal sizeS" onclick="{$action_order_select}">주문상품선택</a></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="ec-base-table typeWrite">
+            <table border="0">
+            <caption>글 수정 폼</caption>
+            <colgroup>
+                <col style="width:190px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row" class="RW">제목</th>
+                    <td>{$form.board_category}{$form.subject}<span class="ec-base-label">{$form.notice}</span><span class="ec-base-label">{$form.is_post}</span></td>
+                </tr>
+                <tr class="{$config.is_login|display}">
+                    <th scope="row">작성자</th>
+                    <td>{$form.writer}</td>
+                </tr>
+                <tr class="{$config.use_write_email|display}">
+                    <th scope="row">이메일</th>
+                    <td class="formGroup">{$form.email}</td>
+                </tr>
+                <tr class="{$config.is_use_point|display}">
+                    <th scope="row">평점</th>
+                    <td>{$form.point}</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="RW top">본문</th>
+                    <td>
+                        {$form.content}
+                    </td>
+                </tr>
+                <tr class="ucc">
+                    <th scope="row">UCC URL</th>
+                    <td>{$form.ucc}</td>
+                </tr>
+            </tbody>
+
+            <tbody class="{$config.use_attach|display}">
+                <tr class="file">
+                    <th scope="row">첨부파일1</th>
+                    <td>{$form.attach_file} {$attached_file1}</td>
+                </tr>
+                <tr class="file">
+                    <th scope="row">첨부파일2</th>
+                    <td>{$form.attach_file} {$attached_file2}</td>
+                </tr>
+                <tr class="file">
+                    <th scope="row">첨부파일3</th>
+                    <td>{$form.attach_file} {$attached_file3}</td>
+                </tr>
+                <tr class="file">
+                    <th scope="row">첨부파일4</th>
+                    <td>{$form.attach_file} {$attached_file4}</td>
+                </tr>
+                <tr class="file">
+                    <th scope="row">첨부파일5</th>
+                    <td>{$form.attach_file} {$attached_file5}</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr class="{$config.use_password|display}">
+                    <th scope="row">비밀번호</th>
+                    <td>{$form.password}</td>
+                </tr>
+                <tr class="{$config.use_secret|display}">
+                    <th scope="row">비밀글설정</th>
+                    <td>{$form.secure}</td>
+                </tr>
+                <tr class="captcha {$config.use_captcha_write|display}">
+                    <th scope="row">보안문자</th>
+                    <td>
+                        <span class="formGroup">{$captcha_image} {$captcha_refresh} {$form.captcha}</span>
+                        <span class="ec-base-help">영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span>
+                    </td>
+                </tr>
+                <tr class="agree {$config.is_login|display}">
+                    <th scope="row">개인정보 수집 및 <br class="RW">이용 동의</th>
+                    <td>
+                        {$form.privacy_agreement}
+                        <div><span class="gSpace20">개인정보 수집 및 이용에 동의하십니까?</span><br class="RMB">{$form.privacy_agreement_radio}</div>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div class="ec-base-button gBottom">
+            <span class="gLeft RW"><a href="{$link_board_list}" class="btnNormalFix sizeM">목록</a></span>
+            <span class="gRight">
+                <a href="{$link_board_list}" target="_top" class="btnNormalFix sizeM">취소</a>
+                <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_modify}">수정</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	■ 로고 이미지는 페이지 중단 각 '로고 변경용 파일'을 [파일열기]하여 파일 내에서 변경해 주세요.
+
+	■ 로고 변경 메뉴얼 - https://idio.co.kr/manual/article/logoRep.html
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_idio/css/header2.css)-->
+
+
+<!--@import(/_idio/inc/topBnr2.html)--><!--◀상단 띠배너 내용 변경◀-->
+<header id="header">
+	<div class="header-inner">
+		<div class="header-wrapper">
+			<div class="hddrw">
+				<div class="btn_drw">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+			<div class="hdlogo" onclick="location.href='/index.html'">
+			
+			
+				<!--@import(/_idio/inc/header_logo.html)--><!--◀상단형 메뉴바 로고 변경용 파일◀-->
+				
+				
+			</div>
+			<div class="hdgnb" id="topMenu">
+			
+			
+				<!--@import(/_idio/inc/menu.html)--><!--◀공통 메뉴 파일◀-->
+				
+				
+			</div>
+			<div class="hdicons">
+				<ul class="top_mypage">
+					<li class="btn_sch"><a><!--@import(/svg/icon-search.html)--></a></li>
+					<li class="btn_my" module="Layout_statelogoff">
+						<a href="/member/login.html">
+							<!--@import(/svg/icon-user.html)-->
+						</a>
+						<div module="Layout_statelogoff" class="benefit">
+							<span class="bounce">
+							
+							
+									+10,000 POINTS !<!--◀로그아웃시 말풍선◀-->
+									
+									
+							</span>
+						</div>
+					</li>
+					<li class="btn_my" module="Layout_statelogon">
+						<a href="/myshop/index.html">
+							<!--@import(/svg/icon-user.html)-->
+						</a>
+						<ul class="toparea_state">
+							<li><a module="Layout_stateLogon" href="/member/modify.html">내정보수정</a></li>
+							<li><a module="Layout_stateLogon" href="{$action_logout}">로그아웃</a></li>
+							<li><a href="/myshop/order/list.html">주문조회</a></li>
+							<li><a module="Layout_stateLogon" href="/myshop/index.html">마이페이지</a></li>
+							<li><a href="/product/recent_view_product.html">최근본상품</a></li>
+							<li module="Layout_attendBanner">
+								<!--
+									$stamp_type_url = /attend/stamp.html
+									$comment_type_url = /attend/comment.html
+								-->
+								<a href="{$attend_url}">출석체크</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="/order/basket.html" module="Layout_orderBasketcount"><!--@import(/svg/icon-cart.html)--><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="nav">
+	<div class="nav_wrapper sb">
+		<div class="navlogo" onclick="location.href='/index.html'">
+		
+		
+			<!--@import(/_idio/inc/header_logo.html)--><!--◀상단형 메뉴바 로고 변경용 파일◀-->
+			
+			
+		</div>
+		<div id="leftMenu">
+		
+		
+			<!--@import(/_idio/inc/menu.html)--><!--◀공통 메뉴 파일◀-->
+			
+			
+		</div>			
+		<ul class="util" module="Layout_statelogoff">
+			<li><a href="/member/login.html">로그인</a></li>
+			<li><a href="/member/agreement.html">회원가입</a></li>
+			<li><a href="/order/basket.html">장바구니</a></li>
+			<li><a href="/myshop/order/list.html">주문조회</a></li>
+			<li><a href="/myshop/index.html">마이페이지</a></li>
+			<li module="Layout_attendBanner">
+				<!--
+					$stamp_type_url = /attend/stamp.html
+					$comment_type_url = /attend/comment.html
+				-->
+				<a href="{$attend_url}">출석체크</a>
+			</li>
+		</ul>		
+		<ul class="util" module="Layout_stateLogon">
+			<li><a href="/order/basket.html">장바구니</a></li>
+			<li><a href="/myshop/order/list.html">주문조회</a></li>
+			<li><a href="/myshop/index.html">마이페이지</a></li>
+			<li><a href="/member/modify.html">내정보수정</a></li>
+			<li module="Layout_attendBanner">
+				<!--
+					$stamp_type_url = /attend/stamp.html
+					$comment_type_url = /attend/comment.html
+				-->
+				<a href="{$attend_url}">출석체크</a>
+			</li>
+			<li><a href="{$action_logout}">로그아웃</a></li>
+		</ul>
+		<div class="follow">
+			<a class="follow-1" target="_blank" onclick="window.open(this.href, 'follow', 'toolbar=no,scrollbars=auto,resizable=yes,width=1200,height=800,left=10,top=10');return false;" target="follow"><img src="/_idio/img/follow_01.png"></a>
+			<a class="follow-2" target="_blank" onclick="window.open(this.href, 'follow', 'toolbar=no,scrollbars=auto,resizable=yes,width=1200,height=800,left=10,top=10');return false;" target="follow"><img src="/_idio/img/follow_02.png"></a>
+			<a class="follow-3" target="_blank" onclick="window.open(this.href, 'follow', 'toolbar=no,scrollbars=auto,resizable=yes,width=1200,height=800,left=10,top=10');return false;" target="follow"><img src="/_idio/img/follow_03.png"></a>
+			<a class="follow-4" target="_blank" onclick="window.open(this.href, 'follow', 'toolbar=no,scrollbars=auto,resizable=yes,width=1200,height=800,left=10,top=10');return false;" target="follow"><img src="/_idio/img/follow_04.png"></a>
+			<a class="follow-5" target="_blank" onclick="window.open(this.href, 'follow', 'toolbar=no,scrollbars=auto,resizable=yes,width=1200,height=800,left=10,top=10');return false;" target="follow"><img src="/_idio/img/follow_05.png"></a>
+		</div>
+		<div class="copyright" module="Layout_footer">Copyright © {$mall_name}</div>		
+	</div>
+</div>
+<div class="nav_cover"></div>
+
+
+<div class="schArea">
+	<div class="sch_cover"></div>
+	<div class="schBox">
+		<div module="Layout_SearchHeader" id="{$search_box_id}">
+			<!--
+				$search_page = /product/search.html
+				$product_page = /product/detail.html
+			-->
+			<p class="tit eng">Search</p>
+			<fieldset class="div">
+				<legend>검색</legend>
+				{$form.keyword}
+				<button type="button" class="btnDelete">삭제</button>
+				<a class="schBtn" alt="검색" onclick="{$action_search_submit}"><!--@import(/svg/icon-search.html)--></a>
+			</fieldset>
+			<div class="bestKeyword" module="search_hotkeyword">
+				<ul class="div">
+					<li class="bkbkbkbk"><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+					<li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/_idio/js/header2.js"></script>

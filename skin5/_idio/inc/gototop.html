@@ -1,0 +1,11 @@
+<!--@css(/_idio/css/gototop.css)-->
+
+<div id="scrollTop">
+	<li onclick="$('html,body').animate({scrollTop:0},'slow')"><i class="fa-solid fa-angle-up"></i></li>
+	<li onclick="$('html,body').animate({scrollTop:$(document).height()},'slow');"><i class="fa-solid fa-angle-down"></i></li>
+</div>
+<div id="btn_talk">
+	<a onclick="window.open(this.href, 'chat', 'toolbar=no,scrollbars=auto,resizable=yes,width=500,height=700,left=10,top=10');return false;" target="chat" class="ic-talk"><i class="fa-solid fa-comment-dots"></i></a>
+</div>
+
+<script src="/_idio/js/gototop.js"></script>

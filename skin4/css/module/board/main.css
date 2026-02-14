@@ -1,0 +1,11 @@
+.boardMain {overflow:hidden;display:flex;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--idio-e8-color);border-left:1px solid var(--idio-e8-color);display:flex;flex-wrap:wrap;}
+.boardMain td img {vertical-align:middle;margin:1px;}
+.boardMain .board {position:relative;flex:1;min-width:33.3333%;height:335px;border-bottom:1px solid var(--idio-e8-color);border-right:1px solid var(--idio-e8-color);padding:40px;}
+.boardMain .board h3 {height:31px;font-size:13px;color:var(--idio-font-color);border-bottom:1px solid #333;}
+.boardMain .board .btnLink {position:absolute;top:40px;right:40px;}
+.boardMain .board .btnLink i {line-height:20px;font-size:12px;color:#ccc;}
+.boardMain .board .ec-base-table table {margin-top:0;}
+.boardMain .board .ec-base-table table tr {-webkit-transition:0.3s ease-in-out;-moz-transition:0.3s ease-in-out;-o-transition:0.3s ease-in-out;transition:0.3s ease-in-out;}
+.boardMain .board .ec-base-table table tr:hover {background-color:var(--idio-f7-color);}
+.boardMain .board .ec-base-table.typeList td {padding:12px 20px;}
+.boardMain .board .ec-base-table.typeList td.right {font-size:12px;color:var(--idio-font-color);}

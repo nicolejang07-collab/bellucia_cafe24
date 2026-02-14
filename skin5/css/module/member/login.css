@@ -1,0 +1,75 @@
+.login > label {padding-left:100px;padding-right:130px;}
+.login .id,
+.login .password {overflow:hidden;display:block;width:100%;margin:0;position:relative;}
+.login .id span,
+.login .password span {height:32px;line-height:32px;padding:0 0 0 10px;}
+.login strong.tit {position:absolute;top:0;left:0;font-size:14px;font-weight:normal;height:48px;line-height:48px;width:100px;text-align:left;}
+.login input[type=text],
+.login input[type=password] {width:100%;height:50px;line-height:48px;padding:0 20px;margin:0 0 10px;border-color:transparent !important;background-color:var(--idio-f7-color);}
+.login .btnLogin {position:absolute;top:0;right:0;width:124px;line-height:78px;}
+
+.wrap_security {position:absolute;bottom:38px;right:0;}
+.wrap_security > * {display:inline-block;vertical-align:middle;line-height:15px;}
+.wrap_security label {font-size:12px;}
+.wrap_security .secret {position:relative;padding-right:3px;font-size:0;line-height:0;}
+.wrap_security .secret img {position:absolute;top:0;left:0;opacity:.00001;width:100%;height:100%;z-index:10;}
+
+.xans-member-login {max-width:680px !important;margin-left:auto;margin-right:auto;text-align:center;margin-bottom:30px;}
+.xans-member-login > fieldset {position:relative;margin:0 auto;padding:35px 0 0;border-top:1px solid #333;}
+.xans-member-login .login {position:relative;padding-bottom:35px;}
+.xans-member-login .login input[type=text], .login input[type=password] {height:48px;margin-bottom:8px;border:1px solid var(--idio-e8-color);}
+.xans-member-login .wrap_security input {width:15px !important;height:15px !important;}
+.xans-member-login .wrap_find {display:flex;justify-content:center;}
+.xans-member-login .wrap_find div {margin:12px 0 0;padding:0 16px;font-size:13px;line-height:1.5;}
+.xans-member-login .wrap_find div:nth-child(2) {padding:0 0 0 16px;background:url('../SkinImg/img/line2.png') no-repeat left;}
+
+.xans-member-login .snsArea {position:relative;padding:30px 0;text-align:center;border-top:1px solid var(--idio-e8-color);font-size:0;line-height:0;}
+.xans-member-login .snsArea:before {display:block;content:'SNS 계정 로그인';width:100%;font-size:15px;font-weight:500;line-height:21px;padding-bottom:10px;text-align:center;}
+.xans-member-login .snsArea li {display:inline-block;margin:0 4px;}
+.xans-member-login .snsArea li a {display:block;width:47px;height:47px;font-size:0;line-height:0;text-align:center;border-radius:50%;position:relative;}
+.xans-member-login .snsArea li:after {content:none;}
+.xans-member-login .snsArea li a span {position:absolute;top:0;left:0;display:block;width:100%;height:100%;background-size:50%;background-position:center center;background-repeat:no-repeat;}
+.xans-member-login .snsArea li.naver a {background-color:#26c826;}
+.xans-member-login .snsArea li.facebook a {background-color:#4267b2;}
+.xans-member-login .snsArea li.google a {background-color:#f4511e;}
+.xans-member-login .snsArea li.kakao a {background-color:#ffd200;}
+.xans-member-login .snsArea li.line a {background-color:#26c826;}
+.xans-member-login .snsArea li.apple a {background-color:#000;}
+.xans-member-login .snsArea li.naver a span {background-image:url('/_idio/img/sns_login_01.png');}
+.xans-member-login .snsArea li.facebook a span {background-image:url('/_idio/img/sns_login_02.png');}
+.xans-member-login .snsArea li.google a span {background-image:url('/_idio/img/sns_login_03.png');}
+.xans-member-login .snsArea li.kakao a span {background-image:url('/_idio/img/sns_login_04.png');}
+.xans-member-login .snsArea li.line a span {background-image:url('/_idio/img/sns_login_05.png');}
+.xans-member-login .snsArea li.apple a span {background-image:url('/_idio/img/sns_login_06.png');}
+
+.xans-member-login .wrap_nomember {width:100%;border-top:1px solid var(--idio-e8-color);border-bottom:1px solid var(--idio-e8-color);padding:30px 0;display:flex;}
+.xans-member-login .wrap_nomember > li {flex:1;display:block;text-align:center;}
+.xans-member-login .wrap_nomember > li p {font-size:15px;line-height:1.5;font-weight:500;}
+.xans-member-login .wrap_nomember > li span {display:block;font-size:13px;font-weight:400;color:#888;padding:0 15px;margin-top:4px;}
+.xans-member-login .wrap_nomember > li#noMemberWrap {border-left:1px solid var(--idio-f3-color);}
+.xans-member-login .wrap_nomember [class^='btn'] {width:200px;text-align:center;font-size:13px;margin-top:14px;font-weight:400;line-height:15px;}
+
+
+@media screen and (max-width:680px) {
+	.login > label {padding-left:0;padding-right:0;}
+	.login strong.tit {display:none;}
+	.login .btnLogin {position:relative;top:unset;right:unset;width:100%;line-height:16px;}
+	
+	.xans-member-login {max-width:300px !important;margin-top:30px;}
+	.xans-member-login .login input[type=text], .login input[type=password] {height:42px;}
+	
+	.xans-member-login .wrap_security {top:-64px;bottom:unset;}
+	.xans-member-login .wrap_find div {margin:16px 0 0;font-size:12px;}
+	.xans-member-login .wrap_nomember {display:block;border-bottom:0;border-bottom:1px solid var(--idio-e8-color);}
+	.xans-member-login .wrap_nomember > li {display:block;width:100%;border-bottom:1px solid var(--idio-e8-color);padding-bottom:35px;}
+	.xans-member-login .wrap_nomember > li#noMemberWrap {border-left:0;border-bottom:0;padding-top:30px;padding-bottom:0;}
+	.xans-member-login .wrap_nomember [class^='btn'] {font-size:11px;line-height:13px;}
+	
+	.xans-member-login .snsArea {margin:0 -10px;}
+	.xans-member-login .snsArea:before {font-size:13px;}
+	.xans-member-login .snsArea li {margin:0 3px;}
+	.xans-member-login .snsArea li a {width:38px;height:38px;}
+	
+	.xans-member-login .wrap_nomember > li p {font-size:13px;}
+	.xans-member-login .wrap_nomember > li span {font-size:11px;}
+}

@@ -1,0 +1,227 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div class="ireview-modal"><iframe frameborder="0" framespacing="0" marginheight="0" marginwidth="0" vspace="0"></iframe></div>
+<div class="ireview-bg"></div>
+
+<div class="section rvList" module="Board_ListPackage_4">
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div module="board_title_4">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="#">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2>{$board_title} {$board_adult_icon}</h2>
+            <p>{$board_info}</p>
+        </div>
+        <p class="imgArea">{$board_top_image}</p>
+    </div>
+
+    <div module="Layout_BoardInfo" class="ec-base-tab typeMenu gScroll">
+        <ul class="menu">
+            <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
+            <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
+        </ul>
+    </div>
+
+    <div id="iReview" class="rvBest" module="board_fixed_4">
+		<div class="tmbType rvBest-wrapper">
+			<div class="swiper rvBest-swiper">
+				<!--
+					$count = 50
+				-->
+				<div class="swiper-wrapper {$block_content_class}" {$block_data_attr}>
+					<div class="swiper-slide">
+						<div class="rvlist" data-link="/board/review/read.html{$param_read}">
+							<div class="chk">{$checkbox}</div>
+							<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" class="attImg" onerror="this.remove()">{$product_img}</div>
+							<div class="txtbox">
+								<div class="point {$point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></div>
+								<div class="rvsbj btn_modal"><span class="badge">{$fixed_icon}</span>{$subject}</div>
+								<div class="rvcont btn_modal">{$content}</div>
+								<div class="wrt"><span class="rvname">{$writer}</span><span class="date">{$write_date|date:Y/m/d}</span></div>
+								<div class="prd">
+									<div class="border">
+										<a href="{$link_product_detail}" class="elp"><span>{$product_img}</span>{$product_name}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide {$block_content_class}" {$block_data_attr}>
+						<div class="rvlist" data-link="/board/review/read.html{$param_read}">
+							<div class="chk">{$checkbox}</div>
+							<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" class="attImg" onerror="this.remove()">{$product_img}</div>
+							<div class="txtbox">
+								<div class="point {$point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></div>
+								<div class="rvsbj btn_modal"><span class="badge">{$fixed_icon}</span>{$subject}</div>
+								<div class="rvcont btn_modal">{$content}</div>
+								<div class="wrt"><span class="rvname">{$writer}</span><span class="date">{$write_date|date:Y/m/d}</span></div>
+								<div class="prd">
+									<div class="border">
+										<a href="{$link_product_detail}" class="elp"><span>{$product_img}</span>{$product_name}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>	
+	</div>
+
+    <div class="boardSort">
+        <span module="board_category_4">{$form.board_category}</span>
+		<div class="chk_all" module="board_listheader_4">{$checkbox}</div>
+    </div>
+
+    <div class="noticeArea ec-base-table typeList" module="board_notice_4">
+		<table border="0">
+			<caption>게시판 목록</caption>
+			<colgroup module="board_listheader_4">
+				<col style="width:80px;">
+				<col style="width:100px;" class="{$config.is_category|display}">
+				<col style="width:auto;">
+				<col style="width:120px;">
+				<col style="width:160px;" class="{$config.use_date|display}">
+				<col style="width:74px;" class="{$config.use_cnt|display}">
+			</colgroup>
+			<thead module="board_listheader_4">
+				<tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+					<th scope="col" class="chk">{$checkbox} 번호</th>
+					<th scope="col" class="{$config.is_category|display}">카테고리</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col" class="{$config.use_date|display}">작성일</th>
+					<th scope="col" class="{$config.use_cnt|display}">조회</th>
+				</tr>
+			</thead>
+			<tbody class="center">
+				<!--
+					$count = 10
+					$product_name_cut = 30
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<tr class="{$block_target_class}" {$block_data_attr}>
+					<td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+					<td class="cate {$category_display|display}">{$category_name}</td>
+					<td class="subject left txtBreak">
+						<span class="badge">{$notice_icon}</span> <strong>{$icon_re}{$icon_lock}<a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}</strong>
+					</td>
+					<td class="info">{$member_icon}{$writer}</td>
+					<td class="info {$date_display|display}">{$write_date}</td>
+					<td class="info {$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</span></td>
+				</tr>
+				<tr class="{$block_target_class}" {$block_data_attr}>
+					<td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+					<td class="cate {$category_display|display}">{$category_name}</td>
+					<td class="subject left txtBreak">
+						<span class="badge">{$notice_icon}</span> <strong>{$icon_re}{$icon_lock}<a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}</strong>
+					</td>
+					<td class="info">{$member_icon}{$writer}</td>
+					<td class="info {$date_display|display}">{$write_date}</td>
+					<td class="info {$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+    <div id="iReview">
+        <div module="board_list_4" class="tmbType">
+            <!--
+                $count = 60
+                $product_name_cut = 30
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+			<div class="slide {$block_content_class}" {$block_data_attr}>
+				<div class="rvlist" data-link="/board/review/read.html{$param_read}">
+					<div class="chk">{$checkbox}</div>
+					<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" class="attImg" onerror="this.remove()">{$product_img}</div>
+					<div class="txtbox">
+						<div class="point {$point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></div>
+						<div class="rvsbj btn_modal">{$icon_re}{$subject}</div>
+						<div class="rvcont btn_modal">{$content}</div>
+						<div class="wrt"><span class="rvname">{$writer}</span><span class="date">{$write_date|date:Y/m/d}</span></div>
+						<div class="prd">
+							<div class="border">
+								<a href="{$link_product_detail}" class="elp"><span>{$product_img}</span>{$product_name}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide {$block_content_class}" {$block_data_attr}>
+				<div class="rvlist" data-link="/board/review/read.html{$param_read}">
+					<div class="chk">{$checkbox}</div>
+					<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" class="attImg" onerror="this.remove()">{$product_img}</div>
+					<div class="txtbox">
+						<div class="point {$point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></div>
+						<div class="rvsbj btn_modal">{$icon_re}{$subject}</div>
+						<div class="rvcont btn_modal">{$content}</div>
+						<div class="wrt"><span class="rvname">{$writer}</span><span class="date">{$write_date|date:Y/m/d}</span></div>
+						<div class="prd">
+							<div class="border">
+								<a href="{$link_product_detail}" class="elp"><span>{$product_img}</span>{$product_name}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div module="board_ButtonList_4" class="{$write_display|display} ec-base-button gBottom">
+        <a href="/board/product/write.html{$param_write}" class="btnSubmitFix {$write_display|display}">글쓰기</a>
+    </div>
+    <div module="board_search_4">
+        <!--@css(/css/module/board/search.css)-->
+        <fieldset class="boardSearch">
+            <legend>게시물 검색</legend>
+            <p class="category {$form.product_category_selector_display|display}">{$form.product_category_selector}</p>
+            <div class="form">{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a></div>
+        </fieldset>
+    </div>
+</div>
+
+<div module="board_paging_4" class="section ec-base-paginate typeList">
+    <a href="{$param_first}" class="first">첫 페이지</a>
+    <a href="{$param_prev}">이전 페이지</a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}">다음 페이지</a>
+    <a href="{$param_last}" class="last">마지막 페이지</a>
+</div>
+
+<!-- Admin only -->
+<div class="section" module="board_catemove_4">
+    <!--@css(/css/module/board/catemove.css)-->
+    <span class="gColumn">{$board_catemove_selectbox}</span>
+    <span class="gColumn"><a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}">{$category_move}</a></span>
+</div>
+
+<div class="section" module="board_function_4">
+    <!--@css(/css/module/board/function.css)-->
+    <span class="gColumn">{$board_function_selectbox}</span>
+    <span class="gColumn">
+        <a href="#none" class="btnNormal sizeS" onclick="{$action_article_move}">{$article_move}</a>
+        <a href="#none" class="btnNormal sizeS" onclick="{$action_article_copy}">{$article_copy}</a>
+    </span>
+    <span class="ec-base-help">{$board_function_help|replace:*,}</span>
+</div>
+
+<script src="/_idio/js/iReview.js"></script>
+<script src="/_idio/js/rvBest.js"></script>
+<!-- // Admin only -->

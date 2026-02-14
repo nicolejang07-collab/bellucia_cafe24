@@ -1,0 +1,30 @@
+span.ec-base-help,
+p.ec-base-help,
+ul.ec-base-help li {margin:2px 0;padding:1px 0 1px 22px;font-size:12px;line-height:1.5;color:#6d6d6d;text-align:left;background:url('//img.echosting.cafe24.com/skin/skin/common/ico_info.svg') no-repeat 0 0;}
+
+div.ec-base-help {margin:50px 0 20px;line-height:1.5;}
+div.ec-base-help > h2,
+div.ec-base-help > h3 {display:block;margin:0 0 20px;font-size:16px;font-weight:500;color:var(--idio-font-color);}
+div.ec-base-help .inner {padding:50px;background-color:var(--idio-fa-color);}
+div.ec-base-help h4 {margin:25px 0 -6px;color:var(--idio-font-color);font-size:13px;font-weight:500;}
+div.ec-base-help h4:first-child {margin-top:0;}
+div.ec-base-help p,
+div.ec-base-help ul,
+div.ec-base-help ol {margin:16px 0 0 0;}
+div.ec-base-help p,
+div.ec-base-help li {color:#777;font-size:12px;line-height:1.7;}
+div.ec-base-help p,
+div.ec-base-help ul li {padding:0 0 0 12px;}
+div.ec-base-help p:before,
+div.ec-base-help ul li:before {content:'';display:inline-block;width:2px;height:2px;margin:9px 9px 0 -12px;vertical-align:top;border-radius:50%;background:#777;}
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    span.ec-base-help,
+    p.ec-base-help,
+    ul.ec-base-help li {margin:10px 0;}
+    div.ec-base-help > h2,
+    div.ec-base-help > h3 {padding:0 15px;}
+	div.ec-base-help h4 {margin:22px 0 -4px;color:var(--idio-font-color);font-size:12px;}
+	div.ec-base-help .inner {padding:30px;}
+}

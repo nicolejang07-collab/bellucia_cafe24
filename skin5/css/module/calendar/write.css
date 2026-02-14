@@ -1,0 +1,5 @@
+#popup {width:600px;}
+.xans-calendar-write td input,
+.xans-calendar-write td textarea {padding:2px 2px 2px 4px;width:350px;height:18px;color:var(--idio-font-color);border:1px solid var(--idio-e8-color);}
+.xans-calendar-write td input#date {width:70px;text-align:center;}
+.xans-calendar-write td textarea {height:80px;}

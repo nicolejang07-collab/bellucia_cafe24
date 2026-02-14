@@ -1,0 +1,16 @@
+.insta {border-top:1px solid #e8e8e8;}
+.insta-wrapper {margin:40px 0;}
+.insta .main_title {text-align:center;transform:scale(0.75);transform-origin:50% 0%;}
+.insta .main_title > * {margin:0;display:inline-block;}
+.insta .main_title h3 i {font-family:"Font Awesome 6 Brands" !important;transform:scale(0.8);transform-origin:0% 75%;margin-right:5px;}
+.insta .main_title p:before {display:inline;content:'@';padding-left:6px;vertical-align:1px;}
+.insta .cont {position:relative;}
+.insta .cont a {display:block;position:absolute;left:0;width:100%;height:100%;z-index:1;margin-top:-10px;}
+.insta iframe {border:none !important;overflow:hidden !important;width:100% !important;margin-top:-10px;}
+
+/*PC*/
+@media all and (min-width:1025px) {
+	.insta-wrapper {margin:80px 0;}
+	.insta .cont a {top:-15px;}
+	.insta iframe {margin-top:-15px;}
+}

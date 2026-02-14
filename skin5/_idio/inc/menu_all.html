@@ -1,0 +1,55 @@
+<!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	■ 대부분 관리자 화면 설정값과 연동됩니다. html, css 활용이 원할하지 않은 경우 편집을 지양해 주세요.
+	
+	■ 상품 카테고리 설정 매뉴얼 : https://idio.co.kr/manual/article/prdCateSet.html
+	
+	■ 게시판 노출 설정 매뉴얼 : https://idio.co.kr/manual/article/brdListSet.html
+	
+	■ 서브페이지 만들기 : https://idio.co.kr/manual/article/addSub.html
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div class="d1Box">
+	
+	<!--상품분류-->
+	<ul module="Layout_category">
+		<li data-param="{$param}" class="d1"><a href="/product/list.html{$param}">{$name}</a></li>
+		<li data-param="{$param}" class="d1"><a href="/product/list.html{$param}">{$name}</a></li>
+	</ul>
+	<!--//상품분류-->
+	
+	<!--기획전-->
+	<ul module="Layout_project">
+		<li class="d1"><a href="{$link_product_project}">{$category_text}</a></li>
+		<li class="d1"><a href="{$link_product_project}">{$category_text}</a></li>
+	</ul>
+	<!--//기획전-->
+	
+	<!--리뷰-->
+	<ul>
+		<li class="d1"><a href="/board/review/list.html?board_no=4">REVIEWS</a></li>
+	</ul>
+	<!--//리뷰-->
+	
+	<!--게시판-->
+	<ul class="brdinfo" module="Layout_BoardInfo">
+		<li class="d1"><a href="{$link_board_list}">{$board_name}</a></li>
+		<li class="d1"><a href="{$link_board_list}">{$board_name}</a></li>
+	</ul>
+	<!--//게시판-->
+	
+	<!--게시판(묶음)-->
+	<ul class="">
+		<li class="d1 pre comm">
+			<a>COMMUNITY</a>
+			<ul class="d2Box inner" module="Layout_BoardInfo">
+				<li class="d2"><a href="{$link_board_list}">{$board_name}</a></li>
+				<li class="d2"><a href="{$link_board_list}">{$board_name}</a></li>
+				<div class="d2BoxBg"></div>
+			</ul>			
+		</li>
+	</ul>
+	<!--//게시판(묶음)-->
+	
+</div>

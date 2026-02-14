@@ -1,0 +1,26 @@
+<a href="{$link_product_detail}" class="link"></a>
+<div class="thumbnail">
+	<div class="num"></div>
+	<div class="ic-wish mov03">{$list_wish_icon}{$basket_icon}</div>
+	<div class="prdImg">
+		<a href="{$link_product_detail}" name="anchorBoxName_{$product_no}">
+			<img src="{$image_small}" class="tmbover mov03">
+			<img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+		</a>
+	</div>
+</div>
+<div class="description">
+	<div class="desc_wrapper">
+		<div class="name">
+			<a href="{$link_product_detail}" class="{$product_name_display|display}">
+				{$product_name}
+			</a>
+			<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
+		</div>
+		<ul module="product_ListItem" class="spec">
+			<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title}</strong> {$item_content}</li>
+			<li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title}</strong> {$item_content}</li>
+		</ul>
+		<div class="icon noChild">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+	</div>
+</div>

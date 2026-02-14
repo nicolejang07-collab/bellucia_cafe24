@@ -1,0 +1,35 @@
+<div module="board_fixed_4">
+	<!--
+		$count = 999999999999999
+	-->
+	<div class="rvlist swiper-slide" data-link="/board/review/read.html{$param_read}">
+		<div class="subject">
+			<div class="info">
+				<p class="point {$use_point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></p>
+				<p class="wrt">
+					<span class="rvname">{$writer}</span><span class="date">{$write_date}</span>
+				</p>
+			</div>
+			<div class="rvsbj btn_modal"><span class="badge"><em>BEST</em></span>{$subject}</div>
+			<div class="rvcont-wrapper">
+				<div class="rvcont">{$content}</div>
+			</div>
+			<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" onerror="this.remove()" alt="" /></div>
+		</div>
+	</div>
+	<div class="rvlist swiper-slide" data-link="/board/review/read.html{$param_read}">
+		<div class="subject">
+			<div class="info">
+				<p class="point {$use_point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></p>
+				<p class="wrt">
+					<span class="rvname">{$writer}</span><span class="date">{$write_date}</span>
+				</p>
+			</div>
+			<div class="rvsbj btn_modal"><span class="badge"><em>BEST</em></span>{$subject}</div>
+			<div class="rvcont-wrapper">
+				<div class="rvcont">{$content}</div>
+			</div>
+			<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" onerror="this.remove()" alt="" /></div>
+		</div>
+	</div>
+</ul>

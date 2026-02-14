@@ -1,0 +1,75 @@
+<!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	■ 상품후기 게시판의 고정글로 지정된 리뷰가 슬라이드로 노출됩니다.
+		※ '관리자 화면 홈 > 게시판관리 > 게시판 > 게시판 관리'에서 사용중인 상품후기 게시판의 '고정글' 메뉴
+	■ 고정글로 지정된 리뷰는 일반 게시물 리스트에서는 사라집니다(카페24 기본값).
+		가급적 게시물을 복사한 후에 고정글로 지정하여 사용해 주세요.
+	■ 메뉴얼 - https://idio.co.kr/manual/article/rvFixedSet.html
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_idio/css/rvArea.css)-->
+
+<section class="rvArea inner round_btn">
+	<div class="main_title" data-aos="fade">
+		<!--▼괄호 또는 기호 삭제에 유의하여 검은색 텍스트 부분만 수정하세요!▼-->
+		
+		
+		<h3>Real Review</h3>
+		<p>실제 경험에 기반한 생생한 후기를 만나보세요.</p>
+		
+		
+		<!--▲괄호 또는 기호 삭제에 유의하여 검은색 텍스트 부분만 수정하세요!▲-->
+	</div>
+	<div id="iReview" module="board_listpackage_4">
+		<div class="tmbType rvArea-wrapper" data-aos="fade-up">
+			<div module="board_fixed_4" class="swiper rvArea-swiper">
+				<!--
+					$count = 50
+				-->
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="rvlist" data-link="/board/review/read.html{$param_read}">
+							<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" class="attImg" onerror="this.remove()">{$product_img}</div>
+							<div class="txtbox">
+								<div class="point {$use_point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></div>
+								<div class="rvsbj btn_modal">{$subject}</div>
+								<div class="rvcont btn_modal">{$content}</div>
+								<div class="wrt"><span class="rvname">{$writer}</span><span class="date">{$write_date|date:Y/m/d}</span></div>
+								<div class="prd">
+									<div class="border">
+										<a href="{$link_product_detail}" class="elp"><span>{$product_img}</span>{$product_name}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rvlist" data-link="/board/review/read.html{$param_read}">
+							<div class="imgbox btn_modal"><img src="{$img_src|replace:/gallery,}" class="attImg" onerror="this.remove()">{$product_img}</div>
+							<div class="txtbox">
+								<div class="point {$use_point_display|display}"><img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점"></div>
+								<div class="rvsbj btn_modal">{$subject}</div>
+								<div class="rvcont btn_modal">{$content}</div>
+								<div class="wrt"><span class="rvname">{$writer}</span><span class="date">{$write_date|date:Y/m/d}</span></div>
+								<div class="prd">
+									<div class="border">
+										<a href="{$link_product_detail}" class="elp"><span>{$product_img}</span>{$product_name}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>	
+	</div>
+	<a href="/board/product/list.html?board_no=4" class="btn_more st_box plus fadeSlideInUp eng">VIEW ALL</a>
+</section>
+
+<div class="ireview-modal"><iframe frameborder="0" framespacing="0" marginheight="0" marginwidth="0" vspace="0"></iframe></div>
+<div class="ireview-bg"></div>
+
+<script src="/_idio/js/rvArea.js"></script>

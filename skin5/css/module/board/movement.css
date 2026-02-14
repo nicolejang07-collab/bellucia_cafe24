@@ -1,0 +1,15 @@
+.xans-board-movement {margin:20px 0;}
+.xans-board-movement li {overflow:hidden;padding:0 20px 0 0;border-bottom:1px solid var(--idio-e8-color);line-height:140%;color:var(--idio-font-color);}
+.xans-board-movement li strong,
+.xans-board-movement li a {float:left;padding:20px 0;font-size:13px;}
+.xans-board-movement li strong {font-size:12px;width:60px;font-weight:500;}
+.xans-board-movement li strong i {width:6px !important;height:6px !important;margin-left:10px;margin-bottom:0;}
+.xans-board-movement li a {display:block;width:calc(100% - 60px);text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;white-space:nowrap;word-wrap:normal !important;}
+.xans-board-movement li.next {border:0;}
+.xans-board-movement li.next strong i {margin-bottom:3px}
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-board-movement li {padding:0 16px;}
+	.xans-board-movement li a {font-size:13px;}
+}

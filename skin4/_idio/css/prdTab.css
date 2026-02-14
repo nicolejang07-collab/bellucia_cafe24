@@ -1,0 +1,83 @@
+.prdTab {position:relative;}
+.prdTab .prdList {width:100% !important;margin-left:0 !important;}
+
+.prdTab .prdTab-bg {position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;}
+.prdTab .prdTab-bg img {width:100%;height:100%;display:block;object-fit:cover;object-position:center;}
+
+.prdTab .swiper-slide {opacity:0 !important;margin-top:0 !important;}
+.prdTab .swiper-slide-active {opacity:1 !important;}
+.prdTab .swiper-pagination {position:relative;text-align:center;width:unset !important;height:unset;left:unset !important;right:unset;bottom:unset;}
+.prdTab .swiper-pagination li {width:fit-content;height:auto;border-radius:0;opacity:0.5;cursor:pointer;transition:all 0.3s;background-color:rgba(200,200,200,0.5) !important;}
+.prdTab .swiper-pagination li span {position:relative;display:inline-block;font-size:12px;font-weight:normal;line-height:25px;color:#000;transition:all 0.3s;letter-spacing:-0.03em;}
+.prdTab .swiper-pagination li span:before {content:"#";margin-right:2px;}
+.prdTab .swiper-pagination .swiper-pagination-bullet-active span:after {width:100%;}
+.prdTab .swiper-pagination .swiper-pagination-bullet-active {background-color:transparent;opacity:1;}
+.prdTab .swiper-pagination-bullet:after {display:none;}
+
+
+/*▼삭제시 썸네일 모서리 라운딩값 제거▼*/
+.prdTab .prdList .prdImg {border-radius:45%;}
+@media all and (max-width:1024px) {
+	.prdTab .prdList .ic-wish {display:none !important;}
+}
+/*▲삭제시 썸네일 모서리 라운딩값 제거▲*/
+
+
+@media all and (max-width:1280px) {
+	.prdTab {padding-top:50px;padding-bottom:50px;}
+	.prdTab .titArea {padding-bottom:0 !important;}
+	.prdTab .main_title {padding-bottom:14px !important;}
+	.prdTab .main_title h3 br,
+	.prdTab .main_title p br {display:none;}
+	.prdTab .prd-item {flex-basis:33.333% !important;margin-bottom:20px !important;padding:0 14px !important;}
+	.prdTab .swiper-pagination {position:relative;top:unset !important;padding-top:0 !important;margin-bottom:24px;}
+	.prdTab .swiper-pagination li {display:inline-block;margin:3px !important;border-radius:15px;padding:0 16px;}
+	.prdTab .swiper-pagination li span {font-size:13px;line-height:30px;}
+}
+
+@media all and (max-width:680px) {
+	.prdTab .prdList .prd-item:nth-child(1) {display:block !important;flex-basis:100% !important;padding:1% 20% 6%;border-bottom:1px solid rgba(130,130,130,0.1);margin-bottom:5% !important;}
+	.prdTab .prdList .prd-item:nth-child(1) .thumbnail {width:70%;max-width:300px !important;margin:0 auto;}
+	.prdTab .prdList .prd-item:nth-child(2),
+	.prdTab .prdList .prd-item:nth-child(3) {flex-basis:50% !important;padding:0 5% !important;}
+	.prdTab .prdList .prd-item:nth-child(2) {border-right:1px solid rgba(130,130,130,0.1);}
+}
+
+@media all and (min-width:960px) and (max-width:1280px) {
+	.prdTab {padding-top:70px;padding-bottom:70px;}
+	.prdTab .main_title {padding-bottom:20px !important;}
+	.prdTab .swiper-pagination {margin-bottom:30px;}
+}
+
+@media all and (min-width:1281px) {
+	.prdTab {padding-top:120px;padding-bottom:100px;}
+	.prdTab .prdTab-wrapper {position:relative;display:flex;align-items:center;}
+
+	.prdTab .titArea {width:320px;padding-right:30px;}
+	.prdTab .contArea {width:calc(100% - 320px);}
+	.prdTab .contArea .inner {padding-left:0;left:0;max-width:unset;height:3px;}
+	.prdTab .contArea .inner .swiper-pagination-progressbar{position:relative;}
+	
+	.prdTab .swiper {position:unset;}
+	.prdTab .swiper-pagination {position:absolute;left:0 !important;bottom:0 !important;top:50%;height:fit-content;-webkit-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%);}
+	.prdTab .swiper-pagination li {display:block;margin:10px 0 0 !important;border-radius:21px;padding:0 22px;}
+	.prdTab .swiper-pagination li span {font-size:17px;line-height:43px;}
+	
+	.prdTab .prd-item {flex-basis:33.333% !important;margin-bottom:20px !important;padding:0 0 0 40px !important;}
+
+	.prdTab .main_title {padding-bottom:0;height:100%;position:relative;}
+	.prdTab .main_title h3,
+	.prdTab .main_title p {display:block;text-align:left;}
+	.prdTab .main_title h3 {font-size:30px;}
+	.prdTab .main_title p {margin:0;font-size:15px;line-height:1.6;padding-bottom:45px;}
+	.prdTab .btn_more {position:absolute;bottom:0;margin:0;}
+}
+
+@media all and (min-width:1280px) and (max-width:1450px) {
+	.prdTab .titArea {width:240px;}
+	.prdTab .contArea {width:calc(100% - 240px);}
+	.prdTab .main_title h3 {font-size:27px;}
+	.prdTab .main_title p {font-size:14px;padding-bottom:30px;}
+	.prdTab .swiper-pagination li {margin:8px 0 0 !important;border-radius:19px;}
+	.prdTab .swiper-pagination li span {font-size:14px;line-height:37px;}
+}

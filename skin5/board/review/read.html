@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+
+    <!-- PG크로스브라우징필수내용 -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- // PG크로스브라우징필수내용 -->
+
+    <title></title>
+	
+    <link rel="stylesheet" href="/layout/basic/css/common.css">
+    <link rel="stylesheet" href="/layout/basic/css/layout.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-ui.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-button.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-tab.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-table.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-tooltip.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-help.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-fold.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-box.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-desc.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-product.css">
+  	<link rel="stylesheet" href="/layout/basic/css/ec-base-prdInfo.css">
+    <link rel="stylesheet" href="/layout/basic/css/ec-base-paginate.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link rel="stylesheet" href="/layout/basic/css/swiper.min.css">
+	<link rel="stylesheet" href="/_idio/css/rvRead.css">
+	
+	<script src="/layout/basic/js/swiper-bundle.min.js"></script>
+	<script src="/layout/basic/js/basic.js"></script>
+	<script src="/layout/basic/js/layout.js"></script>
+	<script src="/js/common.js"></script>
+	
+	<!--jquery-->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!--swiper-->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+	<!--font-->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/_idio/css/common.css">
+    <link rel="stylesheet" href="/_idio/css/font.css">
+    <link rel="stylesheet" href="/_idio/css/color.css">
+    <link rel="stylesheet" href="/_idio/css/iReview.css">
+    <link rel="stylesheet" href="/_idio/css/custom.css">
+
+	<script src="/_idio/js/idio.js"></script>
+	<script src="/setup.js"></script>
+	<script src="/_idio/js/iReview.js"></script>
+
+</head>
+
+<body id="popup" class="sb">
+
+<div id="iReview" class="rvRead sb">
+	<div class="imgView" module="board_ReadPackage_4">
+		<div class="imgView-wrapper" module="board_read_4">
+			<div class=" swiper imgView-swiper">
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-wrapper">
+					{$content_image}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="txtView sb" module="board_ReadPackage_4">
+		<div module="board_read_4" class="sb {$block_target_class}" {$block_data_attr}>
+			<!--
+				$login_page_url = /member/login.html
+				$deny_access_url = /board/review/thumb.html
+			-->			
+			<div class="head">
+				<div class="desc">
+					<div class="point {$config.is_use_point|display}">
+						<img src="/_idio/img/ico_point_{$point_count}.png" alt="{$point_count}점">
+					</div>
+					<div class="rvsbj {$block_content_class}">{$subject}</div>
+					<div class="wrt">
+						<span class="rvname">{$writer}</span>
+						<span class="date">{$write_date}</span>
+					</div>
+				</div>
+				<div module="board_Product_4" class="tmb">
+					<a href="{$link_product_detail}" target="_top"><img id="{$product_img_id}" src="{$product_img}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" alt=""/></a>
+				</div>
+			</div>			
+			<div class="rvcont {$block_content_class}">{$content}</div>
+			<div class="recom {$config.is_use_recom|display}">
+				<p>이 리뷰가 <span>{$vote_count}</span>명에게 도움이 되었어요!</p>
+				<a href="#none" class="btnNormal sizeS" onclick="{$action_vote}"><i class="fa-regular fa-thumbs-up"></i> 추천하기</a>
+			</div>
+			<div class="ec-base-button gColumn">
+                <a href="/board/review/modify.html{$param_modify}" class="btnNormal sizeS  {$modify_button_auth|display}">수정</a>
+				<a href="/board/review/list.html" onclick="{$action_delete}" target="_top" class="btnNormal sizeS {$delete_button_auth|display}">삭제</a>
+			</div>
+		</div>
+		
+		<div class="section" module="board_CommentPackage_4">
+			<link rel="stylesheet" href="/css/module/board/commentPackage.css">
+			<div module="board_commentlist_4">
+				<!--
+					$delete_page_url = /board/product/comment_del.html
+					$delete_success_url = /board/review/read.html
+				-->
+				<ul class="boardComment">
+					<li class="first {$comment_reply_css}" id="{$comment_reply_id}">
+						<div class="commentTop">
+							<strong class="name">{$checkbox} {$member_icon} {$comment_name}</strong>
+							<span class="date">{$comment_write_date}</span>
+							<span class="grade {$config.is_use_point|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$comment_point_count}.svg" alt="{$comment_point_count}점"/></span>
+						</div>
+						<div class="comment">
+							<span class="{$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/ico_spam.gif" alt="스팸글"/></span>
+							{$comment_icon_lock} {$comment_content}
+						</div>
+						<div class="formGroup">
+							<button type="button" class="btnNormal sizeS typeReplyList eReply {$comment_reply_list_display|display}" onclick="{$action_comment_view}">댓글<span class="number">{$comment_reply_count}</span><i aria-hidden="true" class="icon icoArrowBottom"></i>
+							</button>
+							<span class="button">
+								<a href="javascript:;" class="btnNormal sizeS {$comment_modify_display|display}" onclick="{$action_comment_update}">수정</a>
+								<a href="javascript:;" class="btnNormal sizeS {$comment_delete_display|display}" onclick="{$action_comment_delete}">삭제</a>
+								<a href="javascript:;" onclick="{$action_comment_reply}" class="btnNormal sizeS {$comment_reply_display|display}">쓰기</a>
+							</span>
+						</div>
+					</li>
+					<li class="{$comment_reply_css}" id="{$comment_reply_id}">
+						<div class="commentTop">
+							<strong class="name">{$checkbox} {$member_icon} {$comment_name}</strong>
+							<span class="date">{$comment_write_date}</span>
+							<span class="grade {$config.is_use_point|display}">
+								<img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$comment_point_count}.svg" alt="{$comment_point_count}점"/></span>
+						</div>
+						<div class="comment">
+							<span class="{$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/ico_spam.gif" alt="스팸글"/></span>
+							{$comment_icon_lock} {$comment_content}
+						</div>
+						<div class="formGroup">
+							<button type="button" class="btnNormal sizeS typeReplyList eReply {$comment_reply_list_display|display}" onclick="{$action_comment_view}">댓글<span class="number">{$comment_reply_count}</span><i aria-hidden="true" class="icon icoArrowBottom"></i>
+							</button>
+							<span class="button">
+								<a href="javascript:;" class="btnNormal sizeS {$comment_modify_display|display}" onclick="{$action_comment_update}">수정</a>
+								<a href="javascript:;" class="btnNormal sizeS {$comment_delete_display|display}" onclick="{$action_comment_delete}">삭제</a>
+								<a href="javascript:;" onclick="{$action_comment_reply}" class="btnNormal sizeS {$comment_reply_display|display}">쓰기</a>
+							</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div module="board_commentpaging_4" class="ec-base-paginate typeList">
+				<a href="{$param_prev}">이전 페이지</a>
+				<ol>
+					<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+					<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+				</ol>
+				<a href="{$param_next}">다음 페이지</a>
+			</div>
+
+			<div data-aos="fade" data-aos-delay="0">
+				<div module="board_commentform_4">
+					<fieldset>
+						<legend>댓글 수정</legend>
+						<div class="view">
+							{$form.comment_modify}
+							<div class="input">
+								<span class="inside">
+									<span>
+										<label for="comment_password">비밀번호</label>
+										{$form.comment_password}
+									</span>
+								</span>
+								<span class="outside">
+									<span class="secret {$comment_secret_display|display}">
+										<label>{$form.secure}비밀댓글</label>
+									</span>
+									<span class="submit">
+										<a href="#none" class="btnNormal sizeM" onclick="{$action_comment_cancel}">취소</a>
+										<a href="#none" class="btnSubmit sizeM" onclick="{$action_comment_update}">수정</a>
+									</span>
+								</span>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<div module="board_commentformsecret_1002">
+				<p>{$form.secure_password}
+					<span>
+						<a href="#none" class="btnNormal" onclick="{$action_secret_submit}">확인</a>
+						<a href="#none" class="btnNormal" onclick="{$action_secret_cancel}">취소</a>
+					</span>
+				</p>
+			</div>
+
+			<div module="board_commentwrite_4">
+				<!-- 댓글 권한 있음 -->
+				<div class="{$comment_write_display|display}">
+					<fieldset>
+						<legend>댓글 입력</legend>
+						<h4>댓글달기</h4>
+						<div class="comment-box">
+							{$form.comment}
+							<div class="input">
+								<span class="inside {$comment_input_name|display}">
+									<span>
+										<label for="comment_name">이름</label>
+										{$form.comment_name}
+									</span>
+									<span>
+										<label for="comment_password">비밀번호</label>
+										{$form.comment_password}
+									</span>
+								</span>
+								<span class="outside">
+									<span class="secret {$comment_secret_display|display}">
+										<label>{$form.secure}비밀댓글</label>
+									</span>
+									<span class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</span>
+									<a href="#none" onclick="{$action_comment_insert}" class="btnSubmit {$comment_button|display}">등록</a>
+								</span>
+							</div>
+						</div>
+						<div class="grade-box disnone">
+							<span class="grade {$config.is_use_point|display}">{$form.comment_point}</span>
+							<span class="byte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</span>
+						</div>
+						<div class="captcha {$config.use_captcha_comment|display}">
+							{$captcha_image} {$captcha_refresh}
+							{$form.captcha}
+							<span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<div module="board_commentreply_4">
+				<!-- 댓글 권한 있음 -->
+				<div class="{$comment_write_display|display}">
+					<fieldset>
+						<legend>댓글 입력</legend>
+						<div class="comment-box">
+							{$form.comment}
+							<div class="input">
+								<span class="inside {$comment_input_name|display}">
+									<span>
+										<label for="comment_name">이름</label>
+										{$form.comment_name}
+									</span>
+									<span>
+										<label for="comment_password">비밀번호</label>
+										{$form.comment_password}
+									</span>
+								</span>
+								<span class="outside">
+									<span class="secret {$comment_secret_display|display}">
+										<label>{$form.secure}비밀댓글</label>
+									</span>
+									<span class="ec-base-help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</span>
+									<a href="#none" onclick="{$action_comment_insert}" class="btnSubmit sizeM {$comment_button|display}">등록</a>
+								</span>
+							</div>
+						</div>
+						<div class="grade-box disnone">
+							<span class="grade {$config.is_use_point|display}">{$form.comment_point}</span>
+							<span class="byte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</span>
+						</div>
+						<div class="captcha {$config.use_captcha_comment|display}">
+							{$captcha_image} {$captcha_refresh}
+							{$form.captcha}
+							<span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/_idio/js/rvRead.js"></script>
+
+</body>
+</html>

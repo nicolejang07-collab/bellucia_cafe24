@@ -1,0 +1,98 @@
+/* Common */
+.xans-board-title p.imgArea {text-align:center;padding:0;}
+.xans-board-title p.imgArea img {max-width:100%;margin:0 0 20px;}
+
+/* ec-base-tab (Common) */
+.xans-board-listpackage .ec-base-tab.typeMenu .button {margin:0;padding:0;}
+.xans-board-listpackage .ec-base-tab.typeMenu .button:hover {position:relative;color:var(--idio-font-color);}
+.xans-board-listpackage .ec-base-tab.typeMenu .button:hover:after {content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:1px;background-color:var(--idio-font-color);}
+    
+.xans-board-listpackage .boardSort {margin:0 0 20px;position:relative;}
+
+/* Table */
+.xans-board-listpackage {margin:0 0 10px;}
+.xans-board-listpackage .ec-base-table table {clear:both;}
+.xans-board-listpackage .ec-base-table table thead {display:none;}
+.xans-board-listpackage .ec-base-table table tr.re {padding-left:60px;}
+.xans-board-listpackage .ec-base-table table tr.re td.thumb a {display:none;}
+.xans-board-listpackage .ec-base-table table td.no {color:#6d6d6d;}
+.xans-board-listpackage .ec-base-table table th.chk,
+.xans-board-listpackage .ec-base-table table td.chk {overflow:hidden;}
+.xans-board-listpackage .ec-base-table table td.chk .RW {font-size:12px;}
+.xans-board-listpackage .ec-base-table table td.chk .ec-common-rwd-image {margin:3px 0 0;}
+.xans-board-listpackage .ec-base-table table td.subject .product {font-size:12px;margin:0 10px 4px 0;line-height:18px;color:#6d6d6d;}
+.xans-board-listpackage .ec-base-table table td.subject .product:empty {margin-bottom:0;}
+.xans-board-listpackage .ec-base-table table td.subject > a,
+.xans-board-listpackage .ec-base-table table td.subject strong a {font-size:13px;font-weight:500;line-height:1.5;margin-right:5px;vertical-align:middle;}
+.xans-board-listpackage .ec-base-table table td.subject img {width:auto;max-height:21px;margin-right:5px;vertical-align:-3px;}
+.xans-board-listpackage .ec-base-table table td.subject .badge {font-size:12px;margin-right:4px;}
+.xans-board-listpackage .ec-base-table table td.subject .badge img {height:auto;}
+.xans-board-listpackage .ec-base-table table td.subject strong {font-weight:normal;}
+.xans-board-listpackage .ec-base-table table td.info {color:#777;}
+.xans-board-listpackage .ec-base-table table td.cate {color:#777;}
+.xans-board-listpackage .ec-base-table table td.point img {width:auto;height:17px;max-width:unset;}
+.xans-board-listpackage .ec-base-table table td.thumb a {display:inline-block;overflow:hidden;}
+.xans-board-listpackage .ec-base-table table td.thumb span {float:left;width:80px;padding:0 0 0 8px;text-align:left;}
+.xans-board-listpackage .ec-base-table table td .comment {display:inline-block;margin:0 5px 0 0;vertical-align:middle;font-weight:normal;font-size:11px;color:#6d6d6d;}
+.xans-board-listpackage .ec-base-table table td .comment:empty {margin:0;}
+
+/* 갤러리형 탭메뉴 */
+.xans-board-listheader-8 {margin:-5px 0 12px;}
+.xans-board-listheader-8 ul {overflow:hidden;text-align:right;}
+.xans-board-listheader-8 ul li {display:inline-block;padding-left:12px;}
+.xans-board-listheader-8 li a {display:block;opacity:0.5;font-size:12px;color:var(--idio-font-color);}
+.xans-board-listheader-8 li a svg {display:inline-block;margin-right:3px;}
+.xans-board-listheader-8 li.selected a {opacity:1;}
+
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-board-title p.imgArea img {max-width:100%;margin:10px 0 5px;}
+	
+    .xans-board-listpackage .ec-base-button.gBottom {margin:20px 0 0;}
+        
+    /* Table - typeList */
+	.xans-board-listpackage .ec-base-table table td.subject .product {font-size:11px;margin:0 10px 5px 0;}
+    .xans-board-listpackage .ec-base-table.typeList table td.subject .badge {display:inline-block;font-size:11px;margin-right:2px;}
+    .xans-board-listpackage .ec-base-table.typeList table td.subject .badge img {margin-right:0;}
+	.xans-board-listpackage .ec-base-table table tr.re {padding-left:30px;}
+	.xans-board-listpackage .ec-base-table table tr.re td.subject {margin-left:-7px;}
+	.xans-board-listpackage .ec-base-table table td.subject > a,
+	.xans-board-listpackage .ec-base-table table td.subject strong a {font-size:13px;}
+	.xans-board-listpackage .ec-base-table table td.subject img {max-height:12px;vertical-align:-2px;}
+	.xans-board-listpackage .ec-base-table table td.info {font-size:11px;}
+	.xans-board-listpackage .ec-base-table table td.cate {display:block;float:none;font-size:11px;}
+	.xans-board-listpackage .ec-base-table table td.point img {height:15px;}
+    
+    /* ec-base-tab (Common) */
+    .xans-board-listpackage .ec-base-tab.typeMenu {margin:0;padding:0 2px;border-bottom:1px solid var(--idio-e8-color);}
+    .xans-board-listpackage .ec-base-tab.typeMenu .button {margin:0;padding:0 13px 20px;}
+    .xans-board-listpackage .ec-base-tab.gScroll::-webkit-scrollbar {display:none;}
+    .xans-board-listpackage .ec-base-tab.gScroll {-ms-overflow-style:none;scrollbar-width:none;}
+	
+	.xans-board-notice-4 tr {padding:15px 8px !important;}
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    /* Table - typeList */
+	.xans-board-listpackage .ec-base-table.typeList table td.thumb img {width:46px;}
+    .xans-board-listpackage .ec-base-table.typeList table td.chk {overflow:hidden;}
+    .xans-board-listpackage .ec-base-table.typeList table td.chk .boardChk,
+    .xans-board-listpackage .ec-base-table.typeList table th.chk .boardListAll {float:left;margin:2px 5px 0 0;}
+    .xans-board-listpackage .ec-base-table.typeList table td.chk img {margin-top:4px;}
+    .xans-board-listpackage .ec-base-table.typeList table td.subject .badge {display:none;}
+    
+    .xans-board-listpackage .ec-base-tab.typeMenu {margin:0 0 50px;}
+    .xans-board-listpackage .ec-base-tab.typeMenu .button {margin:0 22px;padding:0 0 3px 0;}	
+    
+    .xans-board-listpackage .boardSort {margin:0 0 14px;}
+	.xans-board-listpackage .boardSort select {min-width:152px;margin:0 6px 0 0;}
+    
+	.xans-board-buttonlist.ec-base-button .btnSubmitFix {float:right;width:135px;}
+    .xans-board-buttonlist.ec-base-button.gBottom {margin-top:20px;}
+
+	.xans-board-listheader-8 {margin:0 0 20px;}
+	.xans-board-listheader-8 ul li {padding-left:20px;}
+	.xans-board-listheader-8 li a {font-size:13px;}
+}

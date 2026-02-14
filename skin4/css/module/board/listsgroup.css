@@ -1,0 +1,16 @@
+.xans-board-listsgroup {margin:50px 0;}
+.xans-board-listsgroup h4 {font-size:15px;color:var(--idio-font-color);font-weight:500;margin-bottom:20px;}
+.xans-board-listsgroup .txtNum {font-size:13px;color:#777;}
+.xans-board-listsgroup .ec-base-table table {border-top:1px solid #333;}
+.xans-board-listsgroup .ec-base-table thead {display:none;}
+.xans-board-listsgroup .ec-base-table table td.subject img {width:auto;max-height:21px;margin-left:5px;vertical-align:-2px;}
+.xans-board-listsgroup .ec-base-table .prdname {font-size:13px;color:#777;}
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-board-listsgroup .ec-base-table table > tbody > tr > td:nth-child(1) {display:none;}
+	.xans-board-listsgroup .ec-base-table table td.subject img {max-height:13px;}
+	.xans-board-listsgroup .txtNum {font-size:11px;}
+	.xans-board-listsgroup .ec-base-table .prdname {display:block;width:100%;font-size:11px !important;margin-bottom:3px;}
+	.xans-board-listsgroup .ec-base-table .prdname span {font-size:11px;}
+}

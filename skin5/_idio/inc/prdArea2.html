@@ -1,0 +1,44 @@
+<!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	■ 상품 등록 경로 : 관리자 화면 홈 > 상품관리 > 상품진열 > 메인 상품 진열 > [IDIO]일반리스트2
+	■ 상품을 등록했는데도 보이지 않는 경우, 다음 페이지를 참고해주세요.
+		https://idio.co.kr/manual/article/mainPrdcheck.html
+	■ 접속화면 가로폭에 맞춰 상품이 리사이징되며, 상품 갯수에 비해 영역이 부족한 경우 더보기 버튼이 나타납니다.
+	■ 메뉴얼 - https://idio.co.kr/manual/article/mainPrdSet.html
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<section class="prdArea2">
+	<div class="main_title" data-aos="fade">
+		<!--▼괄호 또는 기호 삭제에 유의하여 검은색 텍스트 부분만 수정하세요!▼-->
+		
+		
+		<h3>WHAT'S NEW</h3>
+		
+		
+		<!--▲괄호 또는 기호 삭제에 유의하여 검은색 텍스트 부분만 수정하세요!▲-->
+	</div>
+	<div class="contArea" data-aos="fade-up">
+		<div module="product_listmain_2" class="ec-base-product">
+			<!--
+				$count = 8
+				$moreview = yes
+				$cache = yes
+			-->
+			<ul class="prdList">
+				<li id="anchorBoxId_{$product_no}" class="prd-item">
+					<!--@import(/_idio/inc/prd.html)-->
+				</li>
+				<li id="anchorBoxId_{$product_no}" class="prd-item">
+					<!--@import(/_idio/inc/prd.html)-->
+				</li>
+			</ul>
+			<div module="product_listmore_2" class="ec-base-paginate typeMoreview">
+				<a href="#none" onclick="{$more_action}" class="btnMore">
+					view more<div>(<span id="more_current_page_{$display_group}">{$current_page}</span>/<span id="more_total_page_{$display_group}">{$total_page}</span>)</div>
+					<span class="icoMore"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

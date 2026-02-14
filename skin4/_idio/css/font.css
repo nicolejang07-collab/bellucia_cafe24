@@ -1,0 +1,12 @@
+* {font-family:'Roboto', 'Noto Sans KR', sans-serif;letter-spacing:-0.025em;}
+.eng, .eng * {font-family:'PT Serif', 'Noto Sans KR', sans-serif;letter-spacing:0;}
+.upper, .upper * {text-transform:uppercase;}
+i {font-family:Font Awesome\ 5 Free !important;}
+.fab {font-family:Font Awesome\ 5 Brands !important;}
+
+/*custom*/
+.main_title h3,
+.listpage_title div,
+.xans-product-additional .board_title h2,
+.aa_title h3,
+.rvList .xans-board-fixed h3 {font-family:'PT Serif', 'Noto Sans KR', sans-serif;letter-spacing:0;}

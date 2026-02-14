@@ -1,0 +1,70 @@
+#iPopupB {display:none;position:fixed;width:380px;max-width:100%;height:auto;z-index:10003;right:50px;bottom:0;}
+#iPopupB.opened {display:block;opacity:1;}
+
+#iPopupB .popup_wrapper {width:100%;height:auto;overflow:hidden;box-shadow:0 12px 20px rgba(0, 0, 0, 0.3);border-radius:30px 30px 0 0;}
+#iPopupB.opened .popup_wrapper {animation:pWrapper 0.5s ease-out;}
+
+@keyframes pWrapper {
+    0% {
+        opacity:0;
+		transform:translate(0, 100px);
+	}
+    100% {
+		opacity:1;
+		transform:translate(0, 0);
+	}
+}
+
+#iPopupB .iPopup-swiper {position:relative;}
+
+#iPopupB .pagination {position:absolute;bottom:14px;right:14px;z-index:2;background-color:rgba(0,0,0,0.7);padding:2px 7px;border-radius:10px;line-height:14px;height:19px;}
+#iPopupB .pagination > * {display:inline;color:#aaa;line-height:14px;}
+#iPopupB .pagination .swiper-pagination-fraction {position:unset;width:auto !important;margin:0 2px;font-size:9px;}
+#iPopupB .pagination .swiper-pagination-fraction span {font-size:10px;color:#fff;}
+
+#iPopupB .swiper-slide {display:block;width:100%;height:100%;line-height:0;overflow:hidden;}
+#iPopupB .swiper-slide a {display:block;width:100%;height:auto;}
+#iPopupB .swiper-slide img {display:block;width:100%;height:auto;}
+
+#iPopupB div[class*='swiper-button'] {width:48px !important;height:48px !important;opacity:0 !important;margin-top:0 !important;background:none;background-color:rgba(0,0,0,0.8);border-radius:0;text-align:center;outline:0;transition:all 0.3s ease;top:50%;-webkit-transform:translate(0, -50%) !important;-ms-transform:translate(0, -50%) !important;transform:translate(0, -50%) !important;}
+#iPopupB div:hover > div[class*='swiper-button'] {opacity:0.13 !important;}
+#iPopupB div:hover > div[class*='swiper-button']:hover {opacity:0.9 !important;}
+#iPopupB div[class*='swiper-button']:after {font-size:14px;line-height:48px;opacity:0.8;color:#fff;}
+
+#iPopupB .swiper-button-prev {left:0 !important;}
+#iPopupB .swiper-button-next {right:0 !important;}
+
+@media all and (max-width:1480px) {
+	#iPopupB div[class*='swiper-button'] {width:40px !important;height:40px !important;}
+	#iPopupB div[class*='swiper-button']:after {font-size:12px;line-height:40px;}
+}
+
+@media all and (max-width:680px) {
+	#iPopupB div[class*='swiper-button'] {display:none !important;}
+}
+
+#iPopupB .popup_footer {width:100%;}
+#iPopupB .cookieToday {display:flex;background-color:#333;}
+#iPopupB .cookieToday > button {flex:1;text-align:center;font-size:13px;line-height:54px;color:#fff;transition:0.3s ease-out;}
+#iPopupB .cookieToday:hover > button {color:#999;}
+#iPopupB .cookieToday > button:first-child {border-right:1px solid rgba(255,255,255,0.07);}
+#iPopupB .cookieToday > button:hover {color:#fff;background-color:#2e2e2e;}
+
+
+@media all and (max-width:860px) {
+	#iPopupB {left:50%;-webkit-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0);}
+}
+
+@media all and (max-width:480px) {
+	#iPopupB {width:100%;}
+	#iPopupB .popup_wrapper {box-shadow:0 0 14px rgba(0, 0, 0, 0.3);}
+
+	#iPopupB div[class*='swiper-button'] {display:none;}
+
+	#iPopupB .pagination {bottom:11px;right:11px;padding:1px 6px;border-radius:8px;line-height:12px;height:15px;}
+	#iPopupB .pagination > * {line-height:12px;}
+	#iPopupB .pagination .swiper-pagination-fraction {font-size:8px;}
+	#iPopupB .pagination .swiper-pagination-fraction span {font-size:9px;}
+
+	#iPopupB .cookieToday > button {flex:1;text-align:center;font-size:11px;line-height:44px;}
+}

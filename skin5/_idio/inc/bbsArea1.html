@@ -1,0 +1,59 @@
+<!-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	■ 기본 갤러리 게시판(ID=8)의 최신글 4개(고정글X, 공지글X)가 자동 추출됩니다.
+
+	■ 리스트 썸네일은 '파일첨부' 기능을 통해서 업로드된 이미지가 노출됩니다.
+		참고 페이지 - http://idio.co.kr/article/자주-묻는-질문/3001/425/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_idio/css/bbsArea1.css)-->
+
+<section class="bbsArea1" module="board_listpackage_8" data-aos="fade-up">
+	<div class="inner">
+		<div class="titArea">
+			<div class="main_title">
+				<!--▼괄호 또는 기호 삭제에 유의하여 검은색 텍스트 부분만 수정하세요!▼-->
+				
+				
+				<h3>What’s new</h3>
+				<p>시아랩의 새로운 소식</p>
+				
+				
+				<!--▲괄호 또는 기호 삭제에 유의하여 검은색 텍스트 부분만 수정하세요!▲-->
+			</div>
+		</div>
+		<div class="contArea round_btn">
+			<div class="swiper bbsArea1-swiper bbsList">
+				<div module="board_list_8" class="swiper-wrapper">
+					<!--
+						$count = 4
+						$main_list = yes
+						$subject_cut = 200
+						$main_list_reply_view = no
+					-->
+					<div class="swiper-slide">
+						<a href="{$link_board_detail}" class="imgLink"><img src="{$img_src|replace:/gallery,}" class="mov03"></a>
+						<div class="info" onclick="location.href='{$link_board_detail}'">
+							<div class="cate txt11 {$category_display|display}">{$category_name}</div>
+							<div class="subject"><a href="{$link_board_detail}">{$subject}</a></div>
+							<a class="btn_more st_ul">view more<i class="fa-solid fa-angle-right"></i></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<a href="{$link_board_detail}" class="imgLink"><img src="{$img_src|replace:/gallery,}" class="mov03"></a>
+						<div class="info" onclick="location.href='{$link_board_detail}'">
+							<div class="cate txt11 {$category_display|display}">{$category_name}</div>
+							<div class="subject"><a href="{$link_board_detail}">{$subject}</a></div>
+							<a class="btn_more st_ul">view more<i class="fa-solid fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>	
+		</div>
+	</div>
+</section>
+
+<script src="/_idio/js/bbsArea1.js"></script>
